@@ -11,7 +11,7 @@ C_erg_awgn = (log2(1+ mean(abs(h).^2).*P/(sigma_z^2))); %AWGN channel capacity (
 C_both = mean((log2(((abs(h).^2).')*P/(sigma_z^2)))); %CSI at both TX and RX
 C_erg =  mean((log2(1+ ((abs(h).^2).')*P/(sigma_z^2)))); %CSI at RX
 C_inv = log2(1+ 1./((sigma_z^2)./mean(abs(h).^2).*P)); %channel inversion
-P_out=25e-2;Arbitrarily chosen outage probability
+P_out=25e-2;%Arbitrarily chosen outage probability
 C_out = (1-P_out).*log2(1+ mean(abs(h).^2).*P/(sigma_z^2)); %Capacity with Outage
 
 
